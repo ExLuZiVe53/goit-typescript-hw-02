@@ -2,15 +2,16 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 
-type createDetails = { details: { createAt: Date; updateAt: Date } };
-type basicDataPage = {
+type basicPage = {
   title: string;
   likes: number;
   accounts: string[];
   status: string;
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
 };
-
-type fullDataPage = basicDataPage | createDetails;
 
 const page1 = {
   title: "The awesome page",
